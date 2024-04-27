@@ -1,0 +1,43 @@
+				ADONIS
+
+Criando um projeto
+
+npm init adonisjs@latest restaurante
+
+api / acess token / sqlite
+
+npm run dev
+
+node ace make: controller Produto
+
+node ace list:routes
+
+npm i better-sqlite3
+
+node ace migration:run
+
+node ace make:controller Produto --resourse ja cria um com as funções
+
+baixar extenção sqliteViewr com peninha
+
+      client: 'better-sqlite3',
+      excluir o better
+      client: 'sqlite3',
+
+      depois instala
+
+      npm i sqlite3 
+
+node ace migration:run
+node ace migration:rollback refaz o passado
+node ace migration:refresh dropa execult o banco: jamais quando tenho dados exclui tudo
+
+
+node ace make:controller Produto --resourse
+node ace make:model Produto
+node ace make:model Cliente -m -c cria model migration controller
+
+
+
+
+git clone criar a pasta tmp e criar o ponto .env
