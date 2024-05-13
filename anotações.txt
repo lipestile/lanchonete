@@ -35,8 +35,15 @@ node ace migration:refresh dropa execult o banco: jamais quando tenho dados excl
 
 node ace make:controller Produto --resourse
 node ace make:model Produto
-node ace make:model Cliente -m -c cria model migration controller
+node ace make:model Cliente -m -c cria model migration 
+node ace make:seeder 1_Tipo
+controller
 
+
+para alimentar
+node ace db:seed
+node ace migration:run --seed
+node ace migration:refresh --seed
 
 
 
