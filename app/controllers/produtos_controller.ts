@@ -10,13 +10,20 @@ export default class ProdutosController {
         const page = request.input('page', 1)
         const perPage = request.input('perPage', 10)
 
-        return await Produto.query().paginate(page, perPage)
+        return await Produto.query()
+                            .paginate(page, perPage)
         // return await Produto.query()
     };
 
 
     async show({params}: HttpContext) {
-        return await Produto.findOrFail(params.id)
+        // como era return await Produto.findOrFail(params.id)
+        return await Produto.query()
+        .where("id", params.id)
+        .preload('tipo')
+        .preload('ingredientes')
+        .first()
+        
     };
 
 
@@ -48,6 +55,4 @@ export default class ProdutosController {
         return {msg:'registro deletado com sucesso', produto}
     };
    
-
-
 }
